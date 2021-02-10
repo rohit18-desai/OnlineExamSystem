@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.MySQL8Dialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         com.mysql.jdbc.Driver
+      </property>
+      
+      <!-- Assume test is the database name -->
+      
+      <property name = "hibernate.connection.url">
+         jdbc:mysql://localhost:3306/Training
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         Rohit
+      </property>
+      
+      <property name = "hibernate.connection.password">
+         Rohit@123
+      </property>
+      
+      <property name="hibernate.hbm2ddl.auto">update</property>
+      <!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+      
+      <property name="hibernate.show_sql">true</property>
+      
+      <!-- List of XML mapping files -->
+      <mapping class = "com.project.model.Users"/>
+      <mapping class = "com.project.model.Questions"/>
+      <mapping class = "com.project.model.Answers"/>
+      <mapping class = "com.project.model.Result"/>
+      
+   </session-factory>
+</hibernate-configuration>
